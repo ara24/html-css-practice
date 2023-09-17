@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5 혼자 해보기</title>
+    <!-- 참고: https://anerim.tistory.com/192 -->
+    <!-- 터미널에 아래 코드 입력하면 scss가 css로 변경됨. --watch는 소스 변경시 자동 컴파일 -->
+    <!-- npx sass --watch practice_css/style.scss practice_css/style.css -->
+    <link rel="stylesheet" href="./practice_css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="title">
+                <h1>Rint Development</h1>
+                <h2>HTML5 + CSS3 Basic</h2>
+            </div>
+            <nav id="gnb">
+                <ul>
+                    <li><a href="#">Web</a></li>
+                    <li><a href="#">Mobile</a></li>
+                    <li><a href="#">Game</a></li>
+                    <li><a href="#">Simulation</a></li>
+                    <li><a href="#">Data</a></li>
+                </ul>
+            </nav>
+            <nav id="lnb">
+                <ul>
+                    <li><a href="#">HTML5</a></li>
+                    <li><a href="#">CSS3</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">Node.js</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content">
+            <section id="section">
+                <article class="article">
+                    <h1>Main Article</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repudiandae autem labore non explicabo voluptates vel modi provident numquam praesentium facilis maxime, quae quis nobis eius porro assumenda ipsum omnis.</p>
+                </article>
+                <article class="article">
+                    <h1>Main Article</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repudiandae autem labore non explicabo voluptates vel modi provident numquam praesentium facilis maxime, quae quis nobis eius porro assumenda ipsum omnis.</p>
+                </article>
+                <article class="article">
+                    <h1>Main Article</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repudiandae autem labore non explicabo voluptates vel modi provident numquam praesentium facilis maxime, quae quis nobis eius porro assumenda ipsum omnis.</p>
+                </article>
+            </section>
+            <aside id="aside">
+                <input id="menu1" type="radio" name="tab" checked="checked" />
+                <input id="menu2" type="radio" name="tab" />
+                <section id="side_menu">
+                    <label for="menu1">First</label>
+                    <label for="menu2">Second</label>
+                </section>
+                <div class="tab_item">
+                    <ul>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x50" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong>
+                                    <p>2019-03-15</p>                                
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x50" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Audio</strong>
+                                    <p>2019-03-15</p>                                
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x50" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Video</strong>
+                                    <p>2019-03-15</p>                                
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x50" />
+                                </div>
+                                <div class="description">
+                                    <strong>HTML5 Semanctic Web</strong>
+                                    <p>2019-03-15</p>                                
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab_item">
+                    <ul>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x50" />
+                                </div>
+                                <div class="description">
+                                    <strong>CSS3 Transition</strong>
+                                    <p>2019-03-15</p>                                
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x50" />
+                                </div>
+                                <div class="description">
+                                    <strong>CSS3 Animation</strong>
+                                    <p>2019-03-15</p>                                
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x50" />
+                                </div>
+                                <div class="description">
+                                    <strong>CSS3 Border</strong>
+                                    <p>2019-03-15</p>                                
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                                <div class="thumbnail">
+                                    <img src="http://placehold.it/45x50" />
+                                </div>
+                                <div class="description">
+                                    <strong>CSS3 Box</strong>
+                                    <p>2019-03-15</p>                                
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <footer id="footer">
+                <h1>HTML5 + CSS3 Basic</h1>
+                <address>Website Layout Basic</address>
+        </footer>
+    </div>
+</body>
+</html>

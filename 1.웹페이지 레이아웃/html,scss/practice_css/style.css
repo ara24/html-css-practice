@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Indie+Flower&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+#wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#header {
+  height: 160px;
+  position: relative;
+}
+#header #title {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  font-family: "Indie Flower", cursive;
+}
+#header #gnb {
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+#header #gnb ul {
+  overflow: hidden;
+}
+#header #gnb ul li {
+  float: left;
+}
+#header #gnb ul li a {
+  display: block;
+  padding: 2px 10px;
+  border: 1px solid black;
+}
+#header #gnb ul li a:hover {
+  background: black;
+  color: white;
+}
+#header #gnb ul li:first-child > a {
+  border-radius: 10px 0 0 10px;
+}
+#header #gnb ul li:last-child > a {
+  border-radius: 0 10px 10px 0;
+}
+#header #lnb {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+#header #lnb ul {
+  overflow: hidden;
+}
+#header #lnb ul li {
+  float: left;
+}
+#header #lnb ul li a {
+  display: block;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+#header #lnb ul li a:hover {
+  background: black;
+  color: white;
+}
+#header #lnb ul li:first-child > a {
+  border-radius: 10px 0 0 10px;
+}
+#header #lnb ul li:last-child > a {
+  border-radius: 0 10px 10px 0;
+}
+
+#content {
+  overflow: hidden;
+}
+#content #section {
+  width: 750px;
+  float: left;
+}
+#content #section .article {
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid black;
+}
+#content #aside {
+  width: 200px;
+  float: right;
+}
+#content #aside #menu1 {
+  display: none;
+}
+#content #aside #menu1 ~ .tab_item:nth-of-type(1) {
+  display: none;
+}
+#content #aside #menu1:checked ~ .tab_item:nth-of-type(1) {
+  display: block;
+}
+#content #aside #menu1:checked ~ #side_menu > label:nth-of-type(1) {
+  background: white;
+  color: black;
+}
+#content #aside #menu2 {
+  display: none;
+}
+#content #aside #menu2 ~ .tab_item:nth-of-type(2) {
+  display: none;
+}
+#content #aside #menu2:checked ~ .tab_item:nth-of-type(2) {
+  display: block;
+}
+#content #aside #menu2:checked ~ #side_menu > label:nth-of-type(2) {
+  background: white;
+  color: black;
+}
+#content #aside #side_menu {
+  overflow: hidden;
+}
+#content #aside #side_menu label {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  background: black;
+  color: white;
+}
+#content #aside .item {
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid black;
+  border-top: none;
+}
+#content #aside .item .thumbnail {
+  float: left;
+}
+#content #aside .item .description {
+  float: left;
+  margin-left: 10px;
+}
+#content #aside .item .description strong {
+  display: block;
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#footer {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Indie+Flower&display=swap');
+
+// reset css
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: 0;
+}
+
+// wrap
+#wrap {
+    width: 960px;
+    margin: 0 auto;
+}
+
+// 헤더
+#header {
+    height: 160px;
+    position: relative;
+    #title {
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        font-family: 'Indie Flower', cursive;
+    }
+
+    #gnb {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        ul {
+            overflow: hidden;
+            li {
+                float: left;
+                a {
+                    display: block;
+                    padding: 2px 10px;
+                    border: 1px solid black;
+                    &:hover {
+                        background: black;
+                        color: white;
+                    }
+                }
+                &:first-child > a {
+                    border-radius: 10px 0 0 10px;
+                }
+                &:last-child > a {
+                    border-radius: 0 10px 10px 0;
+                }
+            }
+        }
+    }
+
+    #lnb {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        ul {
+            overflow: hidden;
+            li {
+                float: left;
+                a {
+                    display: block;
+                    padding: 10px 20px;
+                    border: 1px solid black;
+                    &:hover {
+                        background: black;
+                        color: white;
+                    }
+                }
+                &:first-child > a {
+                    border-radius: 10px 0 0 10px;
+                }
+                &:last-child > a {
+                    border-radius: 0 10px 10px 0;
+                }
+            }
+        }
+    }
+}
+
+// 컨텐츠
+#content {
+    overflow: hidden;
+    #section{
+        width: 750px;
+        float: left;
+        .article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    }
+    #aside{
+        width: 200px;
+        float: right;
+
+        // 탭 처리
+        
+        #menu1 {
+            display: none;
+            & ~ .tab_item:nth-of-type(1) {
+                display: none;
+            }
+            &:checked ~ .tab_item:nth-of-type(1) {
+                display: block;
+            }
+
+            &:checked ~ #side_menu > label:nth-of-type(1) {
+                background: white;
+                color: black;
+            }
+        }
+
+        #menu2 {
+            display: none;
+            & ~ .tab_item:nth-of-type(2) {
+                display: none;
+            }
+            &:checked ~ .tab_item:nth-of-type(2) {
+                display: block;
+            }
+
+            &:checked ~ #side_menu > label:nth-of-type(2) {
+                background: white;
+                color: black;
+            }
+        }
+        
+        #side_menu {
+            overflow: hidden;
+            label {
+                display: block;
+                float: left;
+
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+
+                box-sizing: border-box;
+                border: 1px solid black;
+
+                background: black;
+                color: white;
+            }
+        }
+
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            border: 1px solid black;
+            border-top: none;
+
+            .thumbnail {
+                float: left;
+            }
+            .description {
+                float: left;
+                margin-left: 10px;
+                strong {
+                    display:block;
+                    width: 120px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    box-sizing: border-box;
+    padding:10px;
+    border: 1px solid black;
+
+    text-align: center;
+}
+
