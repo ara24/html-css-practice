@@ -31,7 +31,7 @@ img { border: 0; }
 
 ### position:absolute를 적용한  태그의 부모에 height 속성을 강제로 사용한 이유
 - 절대위치 좌표는 "특정 크기의 영역"을 지정한 태그 내부에서만 사용할 수 있다.
-- 자손의 position 속성에 absolute를 적용하면, 부모에 height 속성이 있어야하고, 부모의 position 속성에 relative 키워드를 적용해야 한다. (부모의 위치를 기준으로 절대위치를 설정하기 떄문)
+- 자손의 position 속성에 absolute를 적용하면, 부모에 height 속성이 있어야하고, 부모의 position 속성에 relative 키워드를 적용해야 한다. (부모의 위치를 기준으로 절대위치를 설정하기 때문)
 
 ```css
 #main_header {
@@ -116,11 +116,11 @@ strong {
     text-overflow: ellipsis;
 }
 ```
-1. white-space는 공백을 처리하는 방법을 지정한다. nowrap 속성을 사용하면 연속 공백을 하나로 핮치고, 자동 줄바꿈을 제거한다.
+1. white-space는 공백을 처리하는 방법을 지정한다. nowrap 속성을 사용하면 연속 공백을 하나로 합치고, 자동 줄바꿈을 제거한다.
 2. overflow: hidden을 사용하면 부모 외부로 삐져나온 텍스트를 숨긴다.
 3. text-overflow: ellipsis를 하면 텍스트가 잘리는 부분에 말줄임(...)처리를 한다.
 4. 위의 1~3이 가능하도록 하기 위해서 width가 꼭 있어야 한다. 정해진 길이가 있어야 그것을 넘어가는 것에 대한 처리를 할 수 있다.
-5. strong 태그가 inline 요소이기 떄문에 width를 적용하려면 block요소로 변경해야한다.
+5. strong 태그가 inline 요소이기 때문에 width를 적용하려면 block요소로 변경해야한다.
 
 ### radio 버튼 name
 radio 버튼은 name 값이 동일한 것 중에서 하나를 선택한다.
