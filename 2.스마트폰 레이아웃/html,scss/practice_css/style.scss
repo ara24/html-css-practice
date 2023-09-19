@@ -1,0 +1,156 @@
+// 초기화
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family: sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+// 헤더
+#header {
+    height: 45px;
+    background: url(../header_background.png);
+    position: relative;
+
+    h1 {
+        color: white;
+        text-align: center;
+        line-height: 45px;
+    }
+    .left, .right {
+        display: block;
+        position: absolute;
+        height: 32px;
+    }
+    .left {
+        width: 62px;
+        left: 5px;
+        top: 7px;
+        background: url('../css_sprites.png');
+        background-position: 0px 0px;
+        text-indent: -99999px;
+    }
+    .right {
+        width: 32px;
+        right: 5px;
+        top: 7px;
+        background: url('../css_sprites.png');
+        background-position: -62px 0px;
+        text-indent: -99999px;
+    }
+}
+
+// 토글 메뉴
+#toggle {
+    display: none;
+
+    &:checked + #toggle_gnb_menu_wrap{
+        display:block;
+    }
+}
+
+#toggle_gnb_menu_wrap {
+    display: none;
+    padding: 15px;
+    background: #363636;
+
+    #toggle_gnb_menu {
+        background: #fff;
+        padding: 5px;
+
+        ul {
+            overflow: hidden;
+            li {
+                float: left;
+                width: 80px;
+            }
+        }
+    }
+}
+
+#top_gnb {
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    background: #b42111;
+
+    div > a {
+        float: left;
+        display: block;
+        width: 25%;
+
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        color: white;
+    }
+}
+
+#bottom_gnb {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid black;
+    table-layout: fixed;
+
+    div {
+        display: table-cell;
+
+        a {
+            display: block;
+            position: relative;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 9px;
+                left: -1px;
+                width: 1px;
+                height: 15px;
+                border-left: 1px solid black;
+                content: ' ';
+            }
+        }
+    }
+}
+
+#section_header {
+    padding: 20px;
+}
+
+#section_article {
+    padding: 10px;
+}
+
+#wrap {
+    // 푸터 하단에 고정
+    position: relative;
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 65px;
+    box-sizing: border-box;
+}
+
+#footer {
+    // 푸터 하단에 고정
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    // 푸터 스타일
+    padding: 10px;
+    border-top: 3px solid black;
+    text-align: center;
+}
