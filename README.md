@@ -1,5 +1,11 @@
 # html css 연습
 
+## 목차
+1. [웹페이지 레이아웃](#1-웹페이지-레이아웃)
+2. [스마트폰  레이아웃](#2-스마트폰-레이아웃)
+
+---
+
 ## 1. 웹페이지 레이아웃
 [preview](https://ara24.github.io/html-css-practice/1.%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/html%2Cscss/practice.html) , [src](https://github.com/ara24/html-css-practice/tree/main/1.%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/html%2Cscss)
 - 웹페이지 기본 레이아웃 구성
@@ -149,6 +155,10 @@ radio 버튼은 name 값이 동일한 것 중에서 하나를 선택한다.
 `ul ol.red` -> 12점  
 `#blue` -> 100점
 
+<br/>
+
+---
+
 ## 2. 스마트폰 레이아웃
 [preview](https://ara24.github.io/html-css-practice/2.%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%20%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/html%2Cscss/practice.html), [src](https://github.com/ara24/html-css-practice/tree/main/2.%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%20%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/html%2Cscss)
 - 이미지로 그레이디언트 생성
@@ -165,7 +175,7 @@ meta 태그는 화면에 특별한 정보를 제공한다.
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 ```
 
-참고. 안드로이드와 아이폰의 meta 태그 설명
+#### 참고. 안드로이드와 아이폰의 meta 태그 설명
 - 안드로이드: https://developer.android.com/guide/webapps/targeting?hl=ko
 - 아이폰: https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
 
@@ -195,7 +205,7 @@ meta 태그는 화면에 특별한 정보를 제공한다.
 }
 ```
 
-참고  
+#### 참고  
 대부분의 안드로이드 스마트폰은 CSS3 그레이디언트를 지원하지 않는다고 한다.  
 오래된 정보일 수 있으니 CSS3 그레이디언트를 적용한다면 이 부분에 대해서 확인이 필요하다.
 
@@ -307,7 +317,7 @@ display: table에 너비 지정을 해야 한다.
     content: ' ';
 }
 ```
-참고. #bottom_gnb > div > a::before에 적용된 내용에 대해서
+#### 참고. #bottom_gnb > div > a::before에 적용된 내용에 대해서
 - div 태그가 아니라 a 태그에 적용한 이유는 클릭 영역을 넓히기 위함이다.
 - ::before에 content 속성은 필수다.
 - left: -1px을 적용하여 첫 번째 메뉴의 border-left를 숨긴다.
