@@ -392,3 +392,85 @@ footer {
 ```html
 <div class="ellipsis">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
 ```
+
+## 3. 태블릿 PC 레이아웃
+[preview](https://ara24.github.io/html-css-practice/3.%ED%83%9C%EB%B8%94%EB%A6%BF%20PC%20%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/html%2Cscss/practice.html), [src](https://github.com/ara24/html-css-practice/tree/main/3.%ED%83%9C%EB%B8%94%EB%A6%BF%20PC%20%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83/html%2Cscss)
+- 정적 레이아웃과 동적 레이아웃을 조합하는 방법
+- 요소 고정
+
+### 화면 너비에 맞게 레이아웃을 동적으로 변화
+좌측 정렬된 메뉴와 우측 정렬된 메뉴가 있을 때, 화면 비율에 따라 메뉴 사이의 공간이 줄어들도록 한다.  
+화면의 너비가 작아지면서 좌측 메뉴와 우측 메뉴가 겹치면 레이아웃 흐트러지기 때문에 min-height를 설정해야 한다.  
+최소 크기를 지정해서 그 이상 줄어들지 않도록 한다.
+```html
+<nav id="main_gnb">
+    <ul class="left">
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+    </ul>
+    <ul class="right">
+        <li><a href="#">Button</a></li>
+        <li><a href="#">Button</a></li>
+    </ul>
+</nav>
+```
+```css
+body {
+    min-width: 760px;
+}
+
+#main_gnb {
+    overflow: hidden;
+}
+#main_gnb > ul.left {
+    overflow: hidden;
+    float: left;
+}
+#main_gnb > ul.right {
+    overflow: hidden;
+    float: right;
+}
+#main_gnb > ul.left > li { float: left; }
+#main_gnb > ul.right > li { float: left; }
+```
+
+### aside(좌측 메뉴) 영역과 section(우측 본문) 영역을 동적 레이아웃으로 적용
+좌측 메뉴 영역의 너비를 고정하고, 우측 본문 영역의 너비가 변하도록 한다.
+```html
+<div id="wrap">
+    <nav id="main_lnb">
+        ...메뉴들
+    </nav>
+    <div id="content">
+        ...컨텐츠
+    </div>
+</div>
+```
+```css
+#wrap { overflow: hidden; }
+#wrap > #main_lnb {
+    float: left;
+    width: 200px;
+}
+#wrap > #content_wrap {
+    float: left;
+    width: calc(100% - 200px);
+}
+```
+
+### 화면에 엘리먼트 고정
+position의 fixed 속성을 사용하면 브라우저 화면 기준으로 위치가 결정된다.  
+스크롤을 이동시켜도 위치가 변하지 않는다.
+```html
+<div id="floating_button">Button</div>
+```
+```css
+#floating_button {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+```
+
+
