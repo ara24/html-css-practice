@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  min-width: 850px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#header {
+  height: 60px;
+  line-height: 60px;
+  padding-left: 10px;
+  border-bottom: 1px solid black;
+  background: #1d4088;
+  color: white;
+}
+
+#gnb {
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  background: #32394a;
+}
+#gnb .left {
+  overflow: hidden;
+  float: left;
+}
+#gnb .left li {
+  float: left;
+}
+#gnb .left li a {
+  display: block;
+  padding: 10px 20px;
+  border-left: 1px solid #3f6673;
+  border-right: 1px solid #242a37;
+  color: white;
+  font-weight: bold;
+}
+#gnb .right {
+  overflow: hidden;
+  float: right;
+}
+#gnb .right li {
+  float: left;
+}
+#gnb .right li a {
+  display: block;
+  padding: 10px 20px;
+  border-left: 1px solid #3f6673;
+  border-right: 1px solid #242a37;
+  color: white;
+  font-weight: bold;
+}
+
+#wrap {
+  overflow: hidden;
+  background: #71b1d1;
+}
+#wrap #lnb {
+  float: left;
+  width: 200px;
+}
+#wrap #lnb a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  border-top: 1px solid #96d6f6;
+  border-bottom: 1px solid #6298b2;
+  color: white;
+  font-weight: bold;
+}
+#wrap #section {
+  float: left;
+  width: calc(100% - 200px);
+  background: white;
+  border-left: 1px solid black;
+  box-sizing: border-box;
+}
+#wrap #section article {
+  padding: 10px;
+}
+
+#footer {
+  padding: 10px;
+  border-top: 3px solid black;
+  text-align: center;
+}
+
+#etc button {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
