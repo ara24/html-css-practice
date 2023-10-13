@@ -2,7 +2,8 @@
 
 ## 목차
 1. [웹페이지 레이아웃](#1-웹페이지-레이아웃)
-2. [스마트폰  레이아웃](#2-스마트폰-레이아웃)
+2. [스마트폰 레이아웃](#2-스마트폰-레이아웃)
+3. [태블릿 PC 레이아웃](#3-태블릿-pc-레이아웃)
 
 ---
 
@@ -434,6 +435,8 @@ body {
 #main_gnb > ul.left > li { float: left; }
 #main_gnb > ul.right > li { float: left; }
 ```
+메뉴 구성을 위해 overflow와 float 세트를 이중으로 사용했다.  
+첫 번째는 `#main_gnb` 안에서 메뉴 세트를 각각 left, right로 정렬하기 위함이고, 두 번째는 `ul.left`와 `ul.right` 내부의 버튼들을 left 정렬하기 위해 사용되었다.
 
 ### aside(좌측 메뉴) 영역과 section(우측 본문) 영역을 동적 레이아웃으로 적용
 좌측 메뉴 영역의 너비를 고정하고, 우측 본문 영역의 너비가 변하도록 한다.
@@ -456,6 +459,22 @@ body {
 #wrap > #content_wrap {
     float: left;
     width: calc(100% - 200px);
+}
+```
+calc을 사용하지 않고, margin과 padding을 이용해서 처리할 수도 있다.
+```css
+#wrap { overflow: hidden; }
+#wrap > #main_lnb {
+    float: left;
+    width: 200px;
+}
+#wrap > #content_wrap {
+    float: left;
+    width: 100%;
+    margin-right: -200px;
+}
+#wrap > #content_wrap > #content {
+    padding-right: 200px;
 }
 ```
 
