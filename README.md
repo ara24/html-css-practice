@@ -492,4 +492,92 @@ position의 fixed 속성을 사용하면 브라우저 화면 기준으로 위치
 }
 ```
 
+## 4. 소셜커머스 메인 페이지
+[preview](https://ara24.github.io/html-css-practice/4.%EC%86%8C%EC%85%9C%20%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%EB%A9%94%EC%9D%B8%20%ED%8E%98%EC%9D%B4%EC%A7%80/html%2Cscss/practice.html), [src](https://github.com/ara24/html-css-practice/tree/main/4.%EC%86%8C%EC%85%9C%20%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%EB%A9%94%EC%9D%B8%20%ED%8E%98%EC%9D%B4%EC%A7%80/html%2Cscss)
+- 웹 페이지 레이아웃 구성
+- 스프라이트 이미지를 사용해서 메뉴 구성
+- 
+
+### 사이드 이미지 목록 구성
+페이지 우측에 세로로 나열된 이미지는 body 영역 외부에 위치한다.  
+inline 요소들은 부모의 너비 안에 가로로 나열되는데 너비가 충분하지 않으면 세로로 나열된다.
+
+```css
+body {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
+#global_aside {
+    position: absolute;
+    left: 990px; // 너비보다 더 오른쪽에 위치
+    top: 75px;
+    width: 90px;
+}
+#global_aside > a {
+    display: block;
+    margin-bottom: 5px;
+}
+```
+a 태그에 margin 속성을 적용하기 위해 display 속성에 block 키워드를 적용했다.
+
+### 스프라이트 이미지를 사용해 메뉴 구성
+메뉴에 사용할 각각의 이미지들을 스프라이트 이미지로 만들고, 각 메뉴의 엘리먼트에 적용한다.  
+기본 이미지와 활성화된 이미지를 포함해서 스프라이트 이미지를 만들면 :hover와 .active를 이용해서 선택된 메뉴와 선택되지 않은 메뉴를 효과적으로 나타낼 수 있다.
+```html
+<nav id="top_gnb">
+    <div class="menu item_1 active"></div>
+    <div class="menu item_2"></div>
+    <div class="menu item_3"></div>
+    <div class="menu item_4"></div>
+    <div class="menu item_5"></div>
+    <div class="menu item_6"></div>
+    <div class="menu item_7"></div>
+</nav>
+```
+```css
+#top_gnb {
+    overflow: hidden;
+}
+#top_gnb > div.menu {
+    float: left;
+    width: 140px;
+    height: 50px;
+    background: url('Images/top_gnb.png')
+}
+
+#top_gnb > div.item_1 { background-position: 0px 0px; }
+#top_gnb > div.item_2 { background-position: 0px -50px; }
+#top_gnb > div.item_3 { background-position: 0px -100px; }
+#top_gnb > div.item_4 { background-position: 0px -150px; }
+#top_gnb > div.item_5 { background-position: 0px -200px; }
+#top_gnb > div.item_6 { background-position: 0px -250px; }
+#top_gnb > div.item_7 { background-position: 0px -300px; }
+
+#top_gnb > div.item_1:hover { background-position: 0px -350px; }
+#top_gnb > div.item_2:hover { background-position: 0px -400px; }
+#top_gnb > div.item_3:hover { background-position: 0px -450px; }
+#top_gnb > div.item_4:hover { background-position: 0px -500px; }
+#top_gnb > div.item_5:hover { background-position: 0px -550px; }
+#top_gnb > div.item_6:hover { background-position: 0px -600px; }
+#top_gnb > div.item_7:hover { background-position: 0px -650px; }
+
+#top_gnb > div.item_1.active { background-position: 0px -350px; }
+#top_gnb > div.item_2.active { background-position: 0px -400px; }
+#top_gnb > div.item_3.active { background-position: 0px -450px; }
+#top_gnb > div.item_4.active { background-position: 0px -500px; }
+#top_gnb > div.item_5.active { background-position: 0px -550px; }
+#top_gnb > div.item_6.active { background-position: 0px -600px; }
+#top_gnb > div.item_7.active { background-position: 0px -650px; }
+```
+
+### img 태그를 세로로 나열했을 때 하단에 공간이 생기는 이유와 제거 방법
+img 태그의 display 속성은 기본으로 inline이다. img 요소에 담긴 이미지는 텍스트처럼 배치된다. 텍스트가 배치될 때 베이스라인(baseline)을 기준으로 위에 달라붙게 된다. 베이스라인 아래의 여분의 공간은 알파벳 소문자(ex. g, p, y) 등을 표기하기 위해 존재한다.  
+diaply 속성을 block으로 변경하면 하단의 공간이 제거된다.
+```css
+img {
+    display: block
+}
+```
+그 외 방법으로는 img 태그에 `vertical-align: bottom;` 또는 `vertical-align: top;` 또는 `line-height: 0;`을 적용하는 방법이 있다.
 
