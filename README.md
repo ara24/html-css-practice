@@ -4,6 +4,7 @@
 1. [웹페이지 레이아웃](#1-웹페이지-레이아웃)
 2. [스마트폰 레이아웃](#2-스마트폰-레이아웃)
 3. [태블릿 PC 레이아웃](#3-태블릿-pc-레이아웃)
+4. [소셜커머스 메인 페이지](#4-소셜커머스-메인-페이지)
 
 ---
 
@@ -496,7 +497,6 @@ position의 fixed 속성을 사용하면 브라우저 화면 기준으로 위치
 [preview](https://ara24.github.io/html-css-practice/4.%EC%86%8C%EC%85%9C%20%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%EB%A9%94%EC%9D%B8%20%ED%8E%98%EC%9D%B4%EC%A7%80/html%2Cscss/practice.html), [src](https://github.com/ara24/html-css-practice/tree/main/4.%EC%86%8C%EC%85%9C%20%EC%BB%A4%EB%A8%B8%EC%8A%A4%20%EB%A9%94%EC%9D%B8%20%ED%8E%98%EC%9D%B4%EC%A7%80/html%2Cscss)
 - 웹 페이지 레이아웃 구성
 - 스프라이트 이미지를 사용해서 메뉴 구성
-- 
 
 ### 사이드 이미지 목록 구성
 페이지 우측에 세로로 나열된 이미지는 body 영역 외부에 위치한다.  
