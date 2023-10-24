@@ -5,6 +5,7 @@
 2. [스마트폰 레이아웃](#2-스마트폰-레이아웃)
 3. [태블릿 PC 레이아웃](#3-태블릿-pc-레이아웃)
 4. [소셜커머스 메인 페이지](#4-소셜커머스-메인-페이지)
+5. [CSS3 transition, animation](https://github.com/ara24/html-css-practice/blob/main/5.css3%20transition%2C%20animation/note.md#5-css3-transition-animation)
 
 ---
 

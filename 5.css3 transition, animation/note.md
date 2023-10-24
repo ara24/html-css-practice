@@ -1,4 +1,6 @@
 # 5. CSS3 Transition, Animation
+실습: [transition](https://ara24.github.io/html-css-practice/5.css3%20transition%2C%20animation/practice1.html),
+[animation](https://ara24.github.io/html-css-practice/5.css3%20transition%2C%20animation/practice2.html)
 
 ## Transition
 css 프로퍼티 값의 상태가 일정 시간동안 변형되도록 하는 속성이다.
